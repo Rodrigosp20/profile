@@ -3,13 +3,13 @@ let carouselContainer = document.getElementById('carousel-container');
 let carousel = document.getElementById('carousel');
 let carouselImage = document.getElementById('cur-image');
 
-let images = ['login.jpeg','main.jpeg','profile.JPG'];
+let images = ['login.jpeg','main.jpeg'];
 
 
 function showCarousel(){
   carouselContainer.style.display = 'flex';
   disableScroll();
-  carouselImage.src = images[index];
+  carouselImage.src = 'carousel/flutter/'+images[index];
 }
 
 function closeCarousel(){
@@ -20,7 +20,7 @@ function closeCarousel(){
 function nextImage(){
   index = (index + 1) % images.length;
 
-  carouselImage.src = images[index];
+  carouselImage.src = 'carousel/flutter/'+images[index];
 }
 
 function prevImage(){
@@ -28,7 +28,7 @@ function prevImage(){
   if (index < 0){
     index = images.length - 1;
   }
-  carouselImage.src = images[index];
+  carouselImage.src = 'carousel/flutter/'+images[index];
 }
 
 //Functions to enable and disable scroll
